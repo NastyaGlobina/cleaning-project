@@ -1,6 +1,6 @@
 <template>
   <div class="sidebar" :class="{pushMainContent: isActive}" @click="isActive=!isActive">
-    <img src="src/assets/images/menu-icon.svg">
+    <img src="/public/menu-icon.svg">
   </div>
   <div id="mySidenav" class="sidenav" :class="{openNavClass: isActive}">
     <a class="closebtn" @click="isActive=!isActive">&times;</a>
