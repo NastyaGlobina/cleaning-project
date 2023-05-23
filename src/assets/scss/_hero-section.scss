@@ -1,0 +1,72 @@
+.hero-section {
+  //position: absolute;
+  margin-top: -90px;
+  width: 100%;
+
+  .img-title {
+    display: flex;
+    width: 100%;
+
+    @media only screen and (max-width: $lg) {
+      flex-direction: column;
+    }
+
+
+    .title {
+      margin: auto;
+
+      h1 {
+        margin: 0 auto;
+        font-family: TravelsRegular;
+        font-weight: 400;
+        font-size: 76px;
+        line-height: 110%;
+        color: $black-light;
+
+        @media only screen and (max-width: $xl) {
+          font-size: 50px;
+        }
+      }
+
+      h1.pc {
+        display: block;
+
+        @media only screen and (max-width: $lg) {
+          display: none;
+
+        }
+      }
+
+      h1.mob {
+        display: none;
+
+        @media only screen and (max-width: $lg) {
+          display: block;
+          margin-top: 30px;
+          text-align: center;
+        }
+
+      }
+
+      p {
+        margin-top: 30px;
+        width: 397px;
+        font-family: TravelsRegular;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 140%;
+
+        @media only screen and (max-width: $xl) {
+          width: 240px;
+        }
+
+        @media only screen and (max-width: $lg) {
+          width: 100%;
+          text-align: center;
+        }
+      }
+    }
+
+
+  }
+}

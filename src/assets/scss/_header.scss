@@ -1,0 +1,94 @@
+header {
+  position: relative;
+  padding: 16px 0;
+  z-index: 5;
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo-btn {
+      display: flex;
+      align-items: center;
+
+      .home-office {
+        display: flex;
+        align-items: center;
+        margin-left: 25px;
+        height: 37px;
+        background-color: $white;
+        border: 1px solid $grey-border;
+        border-radius: 48px;
+        cursor: pointer;
+        
+        button {
+          cursor: pointer;
+        }
+
+        .btn {
+          width: 55px;
+          height: 31px;
+          margin: 3px;
+          font-family: TravelsDemiBold;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 110%;
+          border-radius: 34px;
+        }
+
+        .home {
+          margin: 3px;
+          padding: 8px 12px;
+          width: 55px;
+          height: 31px;
+          border-radius: 34px;
+        }
+
+        .office {
+          margin-left: 16px;
+        }
+      }
+    }
+
+    .categories {
+      display: flex;
+      gap: 32px;
+
+      @media only screen and (max-width: $xl) {
+       display: none;
+      }
+
+
+      a {
+        font-family: TravelsRegular;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 120%;
+        color: $black-light;
+        text-decoration: none;
+        cursor: pointer;
+      }
+    }
+
+    .contacts {
+      @media only screen and (max-width: $md) {
+        display: none;
+      }
+
+      p {
+        font-family: TravelsDemiBold;
+        letter-spacing: 0.2px;
+        span {
+          margin: 0 15px;
+        }
+      }
+    }
+
+    .sidebar {
+      cursor: pointer;
+    }
+
+  }
+}

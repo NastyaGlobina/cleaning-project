@@ -1,0 +1,106 @@
+.cards-section {
+  margin: 73px 0 150px 0;
+
+  @media only screen and (max-width: $xl) {
+    margin: 35px 0 70px 0;
+  }
+
+  .card-wrap {
+    display: flex;
+    gap: 40px;
+
+    &.card-line {
+      .card:nth-child(1) {
+        margin-top: 20px;
+      }
+      .card:nth-child(2) {
+        margin-top: 40px;
+      }
+      .card:nth-child(3) {
+        margin-top: 60px;
+      }
+      .card:nth-child(4) {
+        margin-top: 80px;
+      }
+    }
+
+    @media only screen and (max-width: $xl) {
+      flex-direction: column;
+    }
+
+    .card {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      padding: 20px 40px 0 40px;
+      width: 25%;
+      height: 328px;
+      background-color: $grey-light;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 700ms;
+      animation:  1s ease-in-out;
+
+      @media only screen and (max-width: $xl) {
+        width: 100%;
+      }
+
+      &:hover {
+        background-color: $indigo;
+
+        .img-wrap img {
+          animation: fadeInOut 1s linear 1 forwards;
+        }
+
+        @keyframes fadeInOut {
+          100% {
+            opacity: 0;
+          }
+          0% {
+            opacity: 1;
+          }
+        }
+
+        .text-static {
+          display: none;
+        }
+
+        .text-hover {
+          display: block;
+          animation: textAnim 1.3s linear 1 forwards;
+          @keyframes textAnim {
+            100% {
+              opacity: 1;
+            }
+            0% {
+              opacity: 0;
+            }
+          }
+        }
+      }
+
+      .text-static {
+        display: block;
+        text-align: center;
+        font-family: TravelsMedium;
+        font-size: 24px;
+        line-height: 130%;
+        color: $black-light;
+      }
+
+      .text-hover {
+        display: none;
+        font-family: TravelsRegular;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 140%;
+        color: $white;
+      }
+
+      .img-wrap {
+        position: absolute;
+        bottom: 0;
+      }
+    }
+  }
+}

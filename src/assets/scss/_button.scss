@@ -1,0 +1,5 @@
+@import "reset-btn";
+
+.btn {
+  @extend %reset-button;
+}

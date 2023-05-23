@@ -1,0 +1,64 @@
+//#app {
+//  padding-bottom: 100px;
+//}
+
+.container {
+  margin: 0 auto;
+  padding: 0 15px;
+  width: 1320px;
+  max-width: 100%;
+
+
+  @media only screen and (max-width: $xl) {
+    width: 1200px;
+  }
+
+  @media only screen and (max-width: $lg) {
+    width: 992px;
+  }
+
+  @media only screen and (max-width: $md) {
+    width: 720px;
+  }
+
+
+}
+
+.circle {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 195px;
+  height: 195px;
+  font-family: TravelsRegular;
+  font-size: 18px;
+  line-height: 130%;
+  background-color: $indigo;
+  color: $white;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  text-transform: uppercase;
+  transition: all .18s ease-out;
+  //animation: 17s linear 0s normal none infinite running rot;
+  z-index: 10;
+  cursor: pointer;
+
+  //@keyframes rot {
+  //  0% {
+  //    transform: rotate(0deg);
+  //  }
+  //  100% {
+  //    transform: rotate(360deg);
+  //  }
+  //}
+
+  &.move {
+    max-width: 195px !important;
+    max-height: 195px !important;
+    font-size: 18px !important;
+  }
+
+}
+

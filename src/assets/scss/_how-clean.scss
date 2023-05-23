@@ -1,0 +1,296 @@
+.how-clean {
+
+  .clean-wrap {
+    margin: 0 auto;
+    width: 1094px;
+    max-width: 100%;
+  }
+
+  .title {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 52px;
+
+    @media only screen and (max-width: $lg) {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    h2 {
+      font-family: TravelsLight;
+      font-weight: 400;
+      font-size: 44px;
+      line-height: 120%;
+      color: $black-light;
+    }
+
+    p {
+      margin-top: 15px;
+      width: 414px;
+      max-width: 100%;
+      font-family: TravelsLight;
+      font-size: 18px;
+      line-height: 140%;
+      color: $black-light;
+
+      @media only screen and (max-width: $xl) {
+        width: 100%;
+      }
+    }
+
+  }
+}
+
+.clean-animation {
+  display: block;
+  width: 1180px;
+  max-width: 100%;
+  margin: -100px auto 0 auto;
+
+  .menu {
+    transition: all 1.5s;
+    transform: perspective(2000px) translate3d(0px, -450px, 198px) rotateX(-55deg) scale3d(0.86, 0.75, 1) translateX(-100%);
+  }
+
+  .slider-wrapper {
+    position: relative;
+    height: auto;
+    width: 100%;
+
+    .slider {
+      left: 50%;
+      transform: translateX(-50%);
+      transition: all 1.5s;
+    }
+
+    .block-pluses {
+      opacity: 0;
+      transition: 3s ease-in-out;
+    }
+  }
+
+  &.open-menu {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-auto-rows: auto;
+    margin: 0 auto;
+    position: relative;
+    width: 100%;
+
+    .slider-wrapper {
+      height: 0;
+      padding-bottom: 80%;
+    }
+
+    @media only screen and (max-width: $md) {
+      grid-template-columns: none;
+    }
+
+    .slider-wrapper {
+      position: relative;
+      height: 0;
+      padding-bottom: 80%;
+      width: 100%;
+
+      .slider {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        left: auto;
+        transform: translateX(0);
+      }
+    }
+
+    .block-pluses {
+      opacity: 0;
+      transition: 2s ease-in-out;
+
+      &.slider-ready {
+        opacity: 1;
+      }
+
+      .show-text {
+        padding: 15px 10px 15px 10px;
+        width: 200px;
+        font-family: TravelsDemiBold;
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 130%;
+        background-color: $white;
+        color: #636C81;
+
+        .triangle {
+          position: absolute;
+          bottom: -8%;
+          left: 50%;
+          width: 8px;
+          height: 4px;
+          border-style: solid;
+          border-width: 4px 4px 0 4px;
+          border-color: #ffffff transparent transparent transparent;
+        }
+      }
+
+      .plus {
+        outline: 10px solid rgba(117, 81, 252, 0.17);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: $indigo;
+        cursor: pointer;
+
+        @media only screen and (max-width: $md) {
+          width: 20px;
+          height: 20px;
+        }
+      }
+
+      .btn-round {
+        position: relative;
+      }
+
+      .show-text {
+        position: absolute;
+        bottom: 150%;
+      }
+
+      .plus.one {
+        position: absolute;
+        top: 32%;
+        left: 30%;
+      }
+
+      .plus.two {
+        position: absolute;
+        top: 54%;
+        left: 26%;
+      }
+
+      .plus.three {
+        position: absolute;
+        top: 60%;
+        left: 46%;
+      }
+
+      .plus.four {
+        position: absolute;
+        top: 48%;
+        left: 60%;
+      }
+
+      .plus.five {
+        position: absolute;
+        top: 90%;
+        left: 28%;
+      }
+
+      .plus.six {
+        position: absolute;
+        top: 75%;
+        left: 50%;
+      }
+
+      .plus.seven {
+        position: absolute;
+        top: 63%;
+        left: 77%;
+      }
+
+      .plus.eight {
+        position: absolute;
+        top: 28%;
+        left: 26%;
+      }
+
+      .plus.nine {
+        position: absolute;
+        top: 45%;
+        left: 67%;
+      }
+
+      .plus.ten {
+        position: absolute;
+        top: 85%;
+        left: 35%;
+      }
+
+      .plus.eleven {
+        position: absolute;
+        top: 85%;
+        left: 57%;
+      }
+
+      .plus.twelve {
+        position: absolute;
+        top: 77%;
+        left: 83%;
+      }
+    }
+
+
+    .menu {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      background-color: $indigo;
+      color: white;
+      font-size: 18px;
+      height: 100%;
+      transform: scale3d(1, 1, 1);
+
+      h4 {
+        padding: 35px 0 0 53px;
+        font-family: TravelsDemiBold;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 130%;
+        color: $white;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0 15px !important;
+
+        li {
+          padding-bottom: 22px;
+
+          &:hover {
+            font-style: italic;
+            color: $white !important;
+          }
+        }
+      }
+
+      .categories {
+        margin: auto;
+        cursor: pointer;
+
+        .text {
+          font-family: TravelsLight;
+          font-weight: 400;
+          font-size: 44px;
+          line-height: 120%;
+          color: $white-dark;
+        }
+
+        .active {
+          background-image: url("../images/how-clean/arrow.png");
+          background-repeat: no-repeat;
+          background-size: auto;
+          padding-left: 50px;
+          font-style: italic;
+          color: $white;
+          transition: all .18s ease-out;
+        }
+      }
+    }
+
+
+  }
+
+
+}

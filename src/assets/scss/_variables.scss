@@ -1,0 +1,36 @@
+// Colors
+$black: #222222;
+$black-light: #404040;
+$white: #FFFFFF;
+$white-dark: #cecece;
+$grey: #636C81;
+$grey-border: #E2E8F0;
+$grey-light:  #F3F6FB;
+$indigo:  #5A30F0;
+
+
+
+
+$pink: #f66D9b;
+$red: #e3342f;
+$orange: #f6993f;
+$yellow: #ffed4a;
+$green: #38c172;
+$teal: #4dc0b5;
+$cyan: #6cb2eb;
+$blue: #3490dc;
+
+
+// Grid
+$grid-breakpoints: (
+        sm: 576px,
+        md: 768px,
+        lg: 992px,
+        xl: 1200px,
+        xxl: 1400px
+);
+
+$sm: map-get($grid-breakpoints, sm);
+$md: map-get($grid-breakpoints, md);
+$lg: map-get($grid-breakpoints, lg);
+$xl: map-get($grid-breakpoints, xl);
