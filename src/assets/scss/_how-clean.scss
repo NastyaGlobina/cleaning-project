@@ -133,7 +133,7 @@
       }
 
       .plus {
-        outline: 10px solid rgba(117, 81, 252, 0.17);
+        box-shadow: 0 0 0 10px rgba(117,81,252,.17);
         display: flex;
         justify-content: center;
         align-items: center;

@@ -93,6 +93,9 @@ export default {
   },
   mounted() {
     window.addEventListener('scroll', this.onScroll)
+    if(window.innerWidth < 1024) {
+      this.openMenu = true
+    }
   },
   beforeUnmount() {
     window.removeEventListener('scroll', this.onScroll)
